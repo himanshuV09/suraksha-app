@@ -1,0 +1,5 @@
+-r requirements.txt
+
+# Tests and packaging.
+pytest==9.1.0
+pyinstaller==6.22.0

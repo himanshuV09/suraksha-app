@@ -1,0 +1,80 @@
+@import "@fontsource-variable/geist";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base UI */
+
+:root {
+  font-family: "Geist Variable", Inter, system-ui, sans-serif;
+
+  --background: #f8fafc;
+  --foreground: #1e293b;
+
+  --card: #ffffff;
+
+  --primary: #4f46e5;
+  --primary-soft: #eef2ff;
+
+  --border: #e5e7eb;
+
+  --radius: 12px;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  user-select: none;
+  overflow: hidden;
+}
+
+/* Card */
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: all .2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* Sidebar */
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  width: 100%;
+
+  padding: 10px 14px;
+
+  border-radius: 10px;
+
+  color: #475569;
+
+  font-size: 14px;
+
+  transition:
+    background .2s ease,
+    color .2s ease;
+}
+
+.sidebar-item:hover {
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+.sidebar-active {
+  background: #eef2ff;
+  color: #4338ca;
+  font-weight: 600;
+  border-left: 4px solid #4f46e5;
+}

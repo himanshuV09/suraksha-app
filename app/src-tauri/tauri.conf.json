@@ -1,0 +1,51 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Suraksha",
+  "version": "1.0.0",
+  "identifier": "com.pc-shagun.suraksha",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Suraksha - Digital Forensics",
+        "fullscreen": false,
+        "maximized": true,
+        "decorations": true,
+        "resizable": true,
+        "width": 1440,
+        "height": 900,
+        "minWidth": 1100,
+        "minHeight": 700
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' ipc: http://ipc.localhost"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": [
+      "nsis",
+      "msi"
+    ],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "resources": {
+      "resources/engine/": "engine/"
+    },
+    "publisher": "Suraksha",
+    "shortDescription": "NTFS digital forensics workstation",
+    "longDescription": "Analyze NTFS disk images: MFT, metafiles, USN journal, deleted-file recovery and free-space carving.",
+    "category": "Utility"
+  }
+}
